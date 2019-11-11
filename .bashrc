@@ -1,16 +1,12 @@
 alias l='ls -la'
 
-##################
 # extract/compress
-
 alias tarx="tar -zxvf"
 alias tarc="tar -zcvf"
 alias jarx="jar -xvf"
 
-###################
 
 # find a file, directory, etc. 
-
 findf () 
 { 
     NAME=$1;
@@ -18,11 +14,8 @@ findf ()
     find . -name "*$NAME*" "$@" -print
 }
 
-#####################
-
 # cat all files with the corresponding name, living somewhere below `pwd`
-# requires findf as defined above
-
+# REQUIRES findf as defined above
 fat(){
     local STYLE_BOLD='\e[1m'
     local NO_COLOR='\e[0m'
@@ -39,15 +32,10 @@ fat(){
     fi
 }
 
-####################
-
 # grep through the history
-
 ghist(){
     history | grep -i $1
 }
-
-#####################
 
 # print a colorized and scroallable tree
 # usage: t
@@ -63,10 +51,7 @@ t(){
 
 }
 
- #####################
-
 # colorize man pages
-
 tman() {
     env \
         LESS_TERMCAP_md=$'\e[1;36m' \
@@ -78,16 +63,12 @@ tman() {
             man "$@"
 }
 
-#######################
-
 # find where some function is defined
 whereisfunc() {
     shopt -s extdebug;
     declare -F $1;
     shopt -u extdebug;
 }
-
-#######################
 
 #store time and date when command was issued
 HISTTIMEFORMAT="%d/%m/%y %T "
