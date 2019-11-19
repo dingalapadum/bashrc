@@ -1,9 +1,12 @@
 alias l='ls -la'
 
 # extract/compress
-alias tarx="tar -zxvf"
-alias tarc="tar -zcvf"
-alias jarx="jar -xvf"
+alias tarx='tar -zxvf'
+alias tarc='tar -zcvf'
+alias jarx='jar -xvf'
+
+# github
+alias githubConnect='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_rsa'
 
 
 # find a file, directory, etc. 
