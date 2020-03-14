@@ -1,4 +1,5 @@
-alias l='ls -la'
+alias l='ls -l'
+alias la='ls -la'
 
 # extract/compress
 alias tarx='tar -zxvf'
