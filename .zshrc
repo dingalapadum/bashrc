@@ -17,6 +17,7 @@ export COLOR_LIGHT_GRAY='\[\e[0;37m\]'
 export COLOR_YELLOW='\[\e[1;33m\]'
 export COLOR_GREEN='\[\e[0;32m\]'
 
+setopt extended_glob
 
 alias l='ls -l'
 alias la='ls -la'
@@ -161,11 +162,8 @@ export PROMPT_COMMAND='PS1="-----------------------------\n$COLOR_LIGHT_CYAN\t $
 # ] - end a sequence of non-printing characters 
 
 
-# get git autocompletion 
-. /Users/$USER/.git-completion.zsh
-
 # FZF 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='ag -a --ignore .zip --ignore .jar --nocolor --hidden -g ""'
 alias f="fzf --preview 'highlight -O ansi -l {} || head -100 {}'"
 alias v='vim `fzf --preview "highlight -O ansi -l {} || head -100 {}"`'
