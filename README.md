@@ -6,5 +6,10 @@ or have some other file like ``.mybashrc`` and source it in ``.bashrc``:
 source .mybashrc 
 ```
 
-As it stands the .bashrc assumes some utilities to be installed, like git, tree or fzf.
+---
+
+I the meanwhile I added a .zshrc since I use zsh instead of bash on my mac.
+
+
+As it stands the .bashrc assumes some utilities to be installed, like git, gitcompletion tree or fzf.
 If you don't have them installed I heavly recommend having a look at them.
